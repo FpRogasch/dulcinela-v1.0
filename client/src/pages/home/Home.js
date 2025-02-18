@@ -14,6 +14,14 @@ const Home = () => {
         navigate("/inventario")
     }
 
+    const gotoVentasDiarias = () => {
+        navigate("/ventasDiarias")
+    }
+
+    const goToOtros = () => {
+        navigate("/otros")
+    }
+
     // ##############################################
     // --- Pages: Render ---
     return (
@@ -23,7 +31,7 @@ const Home = () => {
                 <div className='btn btn2' onClick={goToInventory}>
                     <h3>Inventario</h3> 
                 </div>
-                <div className='btn btn2'>
+                <div className='btn btn2' onClick={gotoVentasDiarias}>
                     <h3>Ventas Diarias</h3>
                 </div>
             </div>
@@ -31,7 +39,7 @@ const Home = () => {
                 <div className='btn btn2'>
                     <h3>Facturas</h3>
                 </div>
-                <div className='btn btn2'>
+                <div className='btn btn2' onClick={goToOtros}>
                     <h3>Otros</h3>
                 </div>
             </div>

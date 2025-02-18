@@ -4,6 +4,8 @@ import Home from "./pages/home/Home"
 import Login from "./pages/login/Login";
 import Layout from "./components/common/layout/Layout";
 import Inventario from "./pages/inventory/Inventario";
+import VentasDiarias from "./pages/ventas/ventasDiarias";
+import Otros from "./pages/otros/Otros";
 
 const getCSSVariableValue = (variableName) => {
   return getComputedStyle(document.documentElement).getPropertyValue(variableName).trim();
@@ -41,6 +43,16 @@ function App() {
                 <Inventario />
               </Layout>
             } />
+            <Route path="/ventasDiarias" element={
+              <Layout>
+                <VentasDiarias />
+              </Layout>
+            } />
+            <Route path="/otros" element={
+              <Layout>
+                <Otros />
+              </Layout>
+            } />              
           </Routes>
         </BrowserRouter>
       </ConfigProvider>
